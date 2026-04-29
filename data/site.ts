@@ -21,7 +21,7 @@ export const brand = {
   location: "Santa Rosa de Calamuchita, Córdoba",
   // Reemplazar por el numero real con codigo de pais, sin + ni espacios. Ejemplo Argentina: 5493511234567
   whatsappNumber: "5493546437157",
-  whatsappMessage: "Hola, quiero consultar disponibilidad para alojarme en Santa Rosa de Calamuchita. Somos ___ personas y buscamos para las fechas ___.",
+  whatsappMessage: "Hola, quiero consultar disponibilidad para alojarme en Santa Rosa de Calamuchita. Somos ___ personas y buscamos para las fechas ___ ¿Qué fechas tienen disponibles?.",
   // Reemplazar por el usuario real de Instagram.
   instagramUrl: "https://instagram.com/rumbo.calamuchita"
 };
