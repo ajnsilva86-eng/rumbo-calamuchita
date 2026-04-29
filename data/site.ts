@@ -18,10 +18,10 @@ import {
 
 export const brand = {
   name: "RUMBO CALAMUCHITA",
-  location: "Santa Rosa de Calamuchita, Cordoba",
+  location: "Santa Rosa de Calamuchita, Córdoba",
   // Reemplazar por el numero real con codigo de pais, sin + ni espacios. Ejemplo Argentina: 5493511234567
-  whatsappNumber: "5493510000000",
-  whatsappMessage: "Hola, quiero consultar disponibilidad para alojarme en Calamuchita.",
+  whatsappNumber: "5493546437157",
+  whatsappMessage: "Hola, quiero consultar disponibilidad para alojarme en Santa Rosa de Calamuchita. Somos ___ personas y buscamos para las fechas ___.",
   // Reemplazar por el usuario real de Instagram.
   instagramUrl: "https://instagram.com/rumbo.calamuchita"
 };
