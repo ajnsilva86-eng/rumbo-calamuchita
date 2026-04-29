@@ -1,41 +1,40 @@
-# RUMBO CALAMUCHITA
+import { MessageCircle } from "lucide-react";
+import Link from "next/link";
+import type { ReactNode } from "react";
 
-Landing page profesional para promocionar cabañas, escapadas y experiencias en Santa Rosa de Calamuchita, Cordoba.
+import { whatsappUrl } from "@/data/site";
 
-## Instalar dependencias
+type WhatsAppButtonProps = {
+  children: ReactNode;
+  variant?: "primary" | "secondary" | "light";
+  className?: string;
+  href?: string;
+};
 
-```bash
-npm install
-```
+const variants = {
+  primary:
+    "bg-forest-700 text-white shadow-soft hover:bg-forest-900 focus-visible:outline-forest-700",
+  secondary:
+    "border border-forest-700/20 bg-white text-forest-900 hover:border-forest-700/40 hover:bg-forest-50 focus-visible:outline-forest-700",
+  light:
+    "bg-cream text-forest-900 hover:bg-white focus-visible:outline-white"
+};
 
-## Correr en local
-
-```bash
-npm run dev
-```
-
-Luego abrir `http://localhost:3000`.
-
-## Preparar para produccion
-
-```bash
-npm run build
-```
-
-## Deploy en Vercel
-
-1. Subir este proyecto a GitHub.
-2. Entrar a [Vercel](https://vercel.com).
-3. Crear un nuevo proyecto e importar el repositorio.
-4. Vercel detecta Next.js automaticamente.
-5. Publicar.
-
-## Editar datos principales
-
-Los textos, telefono, Instagram, cabañas, servicios e imagenes estan centralizados en:
-
-```txt
-data/site.ts
-```
-
-Reemplazar el telefono de WhatsApp, Instagram y las imagenes donde estan marcados los comentarios.
+export function WhatsAppButton({
+  children,
+  variant = "primary",
+  className = "",
+  href = whatsappUrl
+}: WhatsAppButtonProps) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${variants[variant]} ${className}`}
+    >
+      <MessageCircle className="h-4 w-4" aria-hidden="true" />
+      {children}
+    </Link>
+  );
+}
