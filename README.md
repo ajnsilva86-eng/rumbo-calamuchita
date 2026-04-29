@@ -11,7 +11,7 @@ type WhatsAppButtonProps = {
   href?: string;
 };
 
-const variants = {
+const variants  = {
   primary:
     "bg-forest-700 text-white shadow-soft hover:bg-forest-900 focus-visible:outline-forest-700",
   secondary:
