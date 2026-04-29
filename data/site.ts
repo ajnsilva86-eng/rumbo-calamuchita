@@ -62,25 +62,25 @@ export const reasons = [
 
 export const cabins = [
   {
-    name: "Cabana Serrana",
-    capacity: "2 a 4 personas",
-    services: ["Cocina equipada", "Parrilla", "Wi-Fi", "Vista al entorno natural"],
+    name: "Rincon del Alba - Complejo Sol de Calamuchita",
+    capacity: "2 personas",
+    services: ["Cocina equipada", "Jacuzzi privado", "Wi-Fi", "Desayuno seco"],
     // Reemplazar por una foto real de la cabana.
-    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80"
+    image: "https://drive.google.com/file/d/1pQr_U1kMtAvSShh0v55eq3HHDyqGB9Yb/view?usp=drive_link"
   },
   {
-    name: "Refugio del Valle",
+    name: "Cabanas Don Oscar - Complejo Sol de Calamuchita",
     capacity: "4 a 6 personas",
-    services: ["Ambientes amplios", "Ropa blanca", "Estacionamiento", "Espacio exterior"],
+    services: ["Ambientes amplios", "Piletas privadas", "Desayunos", "Parrillero con Garaje"],
     // Reemplazar por una foto real de la cabana.
-    image: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=1200&q=80"
+    image: "https://drive.google.com/file/d/1XEhUQMDAi_s0Tt_6aRs4MXCHfajVylq6/view?usp=drive_link"
   },
   {
-    name: "Casa de Descanso",
-    capacity: "Hasta 5 personas",
-    services: ["Living luminoso", "Calefaccion", "Cercania al centro", "Consultas flexibles"],
+    name: "Complejo Casitas de la Loma",
+    capacity: "2 a 6 personas",
+    services: ["Ambientes luminosos", "Calefaccion a gas", "Quincho con juegos", "Desayunos secos"],
     // Reemplazar por una foto real de la cabana.
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80"
+    image: "https://drive.google.com/file/d/1tX3kA2PzNX1mFxatq_NxjrHWFq_6ffVz/view?usp=drive_link"
   }
 ];
 
