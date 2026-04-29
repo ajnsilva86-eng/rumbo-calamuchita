@@ -66,21 +66,21 @@ export const cabins = [
     capacity: "2 personas",
     services: ["Cocina equipada", "Jacuzzi privado", "Wi-Fi", "Desayuno seco"],
     // Reemplazar por una foto real de la cabana.
-    image: "https://drive.google.com/file/d/1pQr_U1kMtAvSShh0v55eq3HHDyqGB9Yb/view?usp=drive_link"
+    image: "https://drive.google.com/uc?export=view&id=1pQr_U1kMtAvSShh0v55eq3HHDyqGB9Yb"
   },
   {
     name: "Cabanas Don Oscar - Complejo Sol de Calamuchita",
     capacity: "4 a 6 personas",
     services: ["Ambientes amplios", "Piletas privadas", "Desayunos", "Parrillero con Garaje"],
     // Reemplazar por una foto real de la cabana.
-    image: "https://drive.google.com/file/d/1XEhUQMDAi_s0Tt_6aRs4MXCHfajVylq6/view?usp=drive_link"
+    image: "https://drive.google.com/uc?export=view&id=1XEhUQMDAi_s0Tt_6aRs4MXCHfajVylq6"
   },
   {
     name: "Complejo Casitas de la Loma",
     capacity: "2 a 6 personas",
     services: ["Ambientes luminosos", "Calefaccion a gas", "Quincho con juegos", "Desayunos secos"],
     // Reemplazar por una foto real de la cabana.
-    image: "https://drive.google.com/file/d/1tX3kA2PzNX1mFxatq_NxjrHWFq_6ffVz/view?usp=drive_link"
+    image: "https://drive.google.com/uc?export=view&id=1tX3kA2PzNX1mFxatq_NxjrHWFq_6ffVz"
   }
 ];
 
