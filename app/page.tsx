@@ -3,9 +3,7 @@ import Link from "next/link";
 import { ArrowDown, MapPin } from "lucide-react";
 
 import { CabinCard } from "@/components/CabinCard";
-import { CatalogCard } from "@/components/CatalogCard";
 import { FeatureCard } from "@/components/FeatureCard";
-import { ReviewCard } from "@/components/ReviewCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
@@ -137,23 +135,6 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <CatalogCard key={service.slug} href={`/servicios/${service.slug}`} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="resenas" className="bg-white px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Resenas"
-            title="Lo que dicen nuestros huéspedes"
-            description="La prueba social ayuda a que nuevas consultas lleguen con mas confianza."
-          />
-          <div className="-mx-4 mt-10 flex snap-x gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
-            {reviews.map((review) => (
-              <div key={`${review.name}-${review.source}`} className="snap-start">
-                <ReviewCard {...review} />
-              </div>
             ))}
           </div>
         </div>
