@@ -1,16 +1,27 @@
 import Image from "next/image";
-import { Users } from "lucide-react";
+import Link from "next/link";
+import { Images, Users } from "lucide-react";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { getWhatsAppUrl } from "@/data/site";
 
 type CabinCardProps = {
+  slug: string;
   name: string;
   capacity: string;
   services: string[];
   image: string;
+  whatsappMessage: string;
 };
 
-export function CabinCard({ name, capacity, services, image }: CabinCardProps) {
+export function CabinCard({
+  slug,
+  name,
+  capacity,
+  services,
+  image,
+  whatsappMessage
+}: CabinCardProps) {
   return (
     <article className="overflow-hidden rounded-[8px] border border-forest-900/10 bg-white shadow-soft">
       <div className="relative aspect-[4/3]">
@@ -36,7 +47,18 @@ export function CabinCard({ name, capacity, services, image }: CabinCardProps) {
             </li>
           ))}
         </ul>
-        <WhatsAppButton className="mt-6 w-full">Consultar por WhatsApp</WhatsAppButton>
+        <div className="mt-6 grid gap-3">
+          <Link
+            href={`/cabanas/${slug}`}
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-forest-700/20 bg-white px-5 text-sm font-semibold text-forest-900 transition hover:border-forest-700/40 hover:bg-forest-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700"
+          >
+            <Images className="h-4 w-4" aria-hidden="true" />
+            Ver más fotos
+          </Link>
+          <WhatsAppButton href={getWhatsAppUrl(whatsappMessage)} className="w-full">
+            Consultar por WhatsApp
+          </WhatsAppButton>
+        </div>
       </div>
     </article>
   );

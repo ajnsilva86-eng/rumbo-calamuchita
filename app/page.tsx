@@ -3,7 +3,9 @@ import Link from "next/link";
 import { ArrowDown, MapPin } from "lucide-react";
 
 import { CabinCard } from "@/components/CabinCard";
+import { CatalogCard } from "@/components/CatalogCard";
 import { FeatureCard } from "@/components/FeatureCard";
+import { ReviewCard } from "@/components/ReviewCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
@@ -11,8 +13,9 @@ import {
   cabins,
   experiences,
   navigation,
-  optionalServices,
   reasons,
+  reviews,
+  services,
   socialLinks
 } from "@/data/site";
 
@@ -93,12 +96,12 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Cabanas"
-            title="Opciones para parejas, familias y grupos pequeños"
-            description="Estas cards estan listas para reemplazar por tus cabañas reales, con fotos, capacidad y servicios editables desde un solo archivo."
+            title="Alojamientos para parejas, familias y grupos pequeños"
+            description="Cada alojamiento tiene su ficha individual con galeria, caracteristicas y consulta directa por WhatsApp."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {cabins.map((cabin) => (
-              <CabinCard key={cabin.name} {...cabin} />
+              <CabinCard key={cabin.slug} {...cabin} />
             ))}
           </div>
         </div>
@@ -109,41 +112,54 @@ export default function Home() {
           <SectionHeading
             eyebrow="Experiencias"
             title="Cada viaje puede tener su propio ritmo"
-            description="Desde una escapada romantica hasta un fin de semana familiar, te ayudamos a encontrar una propuesta acorde a tu plan."
+            description="Sumá propuestas turisticas editables para vender escapadas, paseos y planes personalizados."
             align="center"
           />
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {experiences.map((experience) => (
-              <FeatureCard key={experience.title} {...experience} />
+              <CatalogCard
+                key={experience.slug}
+                href={`/experiencias/${experience.slug}`}
+                {...experience}
+              />
             ))}
           </div>
         </div>
       </section>
 
       <section id="servicios" className="bg-cream px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="mx-auto max-w-7xl">
           <SectionHeading
-            eyebrow="Servicios opcionales"
-            title="Detalles que hacen la estadia mas comoda"
-            description="Podes sumar servicios segun disponibilidad y tipo de alojamiento. El objetivo es que llegues, descanses y disfrutes del valle con menos pendientes."
+            eyebrow="Servicios externos"
+            title="Extras para una estadia mas comoda"
+            description="Mostrá proveedores, adicionales y servicios coordinados que aumentan el valor de cada consulta."
           />
-          <div className="grid gap-3 sm:grid-cols-2">
-            {optionalServices.map((service) => (
-              <div
-                key={service.name}
-                className="flex items-center gap-3 rounded-[8px] border border-forest-900/10 bg-white p-4 shadow-sm"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-earth-100 text-earth-700">
-                  <service.icon className="h-5 w-5" aria-hidden="true" />
-                </div>
-                <p className="font-medium text-forest-900">{service.name}</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
+              <CatalogCard key={service.slug} href={`/servicios/${service.slug}`} {...service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="resenas" className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            eyebrow="Resenas"
+            title="Lo que dicen nuestros huéspedes"
+            description="La prueba social ayuda a que nuevas consultas lleguen con mas confianza."
+          />
+          <div className="-mx-4 mt-10 flex snap-x gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
+            {reviews.map((review) => (
+              <div key={`${review.name}-${review.source}`} className="snap-start">
+                <ReviewCard {...review} />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="ubicacion" className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <section id="ubicacion" className="bg-forest-50 px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-soft">
             <Image
