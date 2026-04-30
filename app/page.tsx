@@ -12,9 +12,7 @@ import {
   experiences,
   navigation,
   reasons,
-  reviews,
   services,
-  socialLinks
 } from "@/data/site";
 
 export default function Home() {
