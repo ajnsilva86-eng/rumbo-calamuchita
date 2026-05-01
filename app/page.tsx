@@ -98,7 +98,7 @@ export default function Home() {
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {cabins.map((cabin) => (
-              <CabinCard key={cabin.name} {...cabin} />
+              <CabinCard key={cabin.slug} {...cabin} />
             ))}
           </div>
         </div>
