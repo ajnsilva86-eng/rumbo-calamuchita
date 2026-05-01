@@ -199,7 +199,7 @@ export const services = [
     icon: Coffee
   },
   {
-    slug: "pension-y-comidas",
+   slug: "pension-y-comidas",
     title: "Media pension y comidas",
     description: "Opciones de comida para resolver parte de la estadia con proveedores locales seleccionados.",
     image: "https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=1200&q=80",
