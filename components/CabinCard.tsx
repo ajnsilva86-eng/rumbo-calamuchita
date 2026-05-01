@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Images, Users } from "lucide-react";
+import { Images, MessageCircle, Users } from "lucide-react";
 
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { getWhatsAppUrl } from "@/data/site";
 
 type CabinCardProps = {
@@ -55,9 +54,15 @@ export function CabinCard({
             <Images className="h-4 w-4" aria-hidden="true" />
             Ver más fotos
           </Link>
-          <WhatsAppButton href={getWhatsAppUrl(whatsappMessage)} className="w-full">
+          <Link
+            href={getWhatsAppUrl(whatsappMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-forest-700 px-5 text-sm font-semibold text-white shadow-soft transition hover:bg-forest-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-700"
+          >
+            <MessageCircle className="h-4 w-4" aria-hidden="true" />
             Consultar por WhatsApp
-          </WhatsAppButton>
+          </Link>
         </div>
       </div>
     </article>
