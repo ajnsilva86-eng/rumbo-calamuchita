@@ -5,6 +5,7 @@ import {
   Coffee,
   ConciergeBell,
   Heart,
+  Home,
   Instagram,
   MapPin,
   MessageCircle,
@@ -13,6 +14,7 @@ import {
   TreePine,
   Users,
   Utensils,
+  Waves
 } from "lucide-react";
 
 export const brand = {
@@ -170,6 +172,15 @@ export const experiences = [
     whatsappMessage: "Hola, quiero consultar disponibilidad para un fin de semana largo en Calamuchita.",
     icon: Binoculars
   }
+];
+
+export const optionalServices = [
+  { name: "Desayuno", icon: Coffee },
+  { name: "Media pension", icon: Utensils },
+  { name: "Pension completa", icon: Home },
+  { name: "Toallas", icon: Waves },
+  { name: "Limpieza", icon: Sparkles },
+  { name: "Experiencias personalizadas", icon: BedDouble }
 ];
 
 export const services = [
